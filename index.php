@@ -20,16 +20,38 @@
                 <a class="nav-link active" aria-current="page" href="index.php">Home</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="novo_usuario.php">Novo Usuario</a>
+                <a class="nav-link" href="page=novo">Novo Usuario</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="listar_usuario.php">Listar Usuarios</a>
+                <a class="nav-link" href="?page=listar">Listar Usuarios</a>
                 </li>
                 
             </ul>
             </div>
         </div>
     </nav>
+
+    <div class="container">
+      <div class="row">
+        <div class="col mt-5">
+          <?php
+          include("config.php");
+            switch($_REQUEST ['page']){
+                case "novo":
+                  include("novo_usuario.php");
+                break;
+                case "lista":
+                  include("listar_usuario.php");
+                break;
+                default:
+                print "<h1>Bem Vindo!</h1>";
+            }
+      
+          ?>
+        </div>
+      </div>
+    </div>
+
     <script src="js/bootstrap.bundle.min.js" ></script>
   </body>
 </html>
