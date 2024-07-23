@@ -6,8 +6,8 @@
     <link href="css/bootstrap.min.css" rel="stylesheet" >
   </head>
 
-    <form action="?page_salva.php" method="POST" class="container">
-        <input type="hidden" name="acao" value="cadastra">
+    <form action="salvar_usuario.php" method="POST" class="container">
+        <input type="hidden" name="acao" value="cadastra ">
         <h1>Novo Usuario</h1>
             <div class="mb-3">
                 <label for="nome">Nome:</label>
